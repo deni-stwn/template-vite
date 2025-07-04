@@ -1,16 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/style.css">
-    <title>Vite App</title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+   <header>
+      <div class="logo">M<span>otelkusuka</span></div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><span href="#">Booking</span></li>
+          <li><span href="#">Facilities</span></li>
+          <li><span href="#">About us</span></li>
+          <li><span href="#">Contact</span></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="#" class="login">Log in</a>
+        <a href="#" class="register">Register</a>
+      </div>
+    </header>
+    
+    <main class="hero">
+      <div class="hero-left">
+        <p class="category">Mountains | Plans | Beaches</p>
+        <h1>
+          <span class="green">Find</span> Your Perfect <br />
+          <span class="green">Place</span> to your <span class="green">Family</span>
+        </h1>
+        <p class="desc">
+          Lorem ipsum pay blonqar talesk polyng. Infrarad abplastisk intrad. Monavis ger. Makroren bent i <br> plaska liksom egose.
+        </p>
+        <a href="#" class="register-btn">Register</a>
+      </div>
+      <div class="hero-right">
+        <img src="public/asset/hotel.png" alt="Hotel Image" />
+      </div>
+    </main>
+
+    <section class="partners">
+      <h3>Technology Partnership</h3>
+      <div class="logos">
+        <img src="public/asset/bank1.png" alt="Bankin" />
+        <img src="public/asset/bank2.png" alt="Bank1" />
+        <img src="public/asset/bank3.png" alt="Bankcard" />
+        <img src="public/asset/bank4.png" alt="TransferWise" />
+        <img src="public/asset/bank5.png" alt="Wire Transfer" />
+      </div>
+    </section>
+
+
+ <section class="popular">
+    <div class="container">
+        <div class="popular-header-row">
+            <div>
+                <h2>Most Popular</h2>
+                <p>Lorem ipsum pov biongar telesk polyng. Infrarad abplastisk intrad. Monovis ger. Makroren bent i plaska liksom egose.</p>
+            </div>
+            <div class="btn-wrapper">
+                <button class="seemore-btn">See more</button>
+            </div>
+        </div>
+        
+        <div class="cards">
+            <div class="card"><img src="public/asset/fs1.png" alt="" /></div>
+            <div class="card"><img src="public/asset/fs2.png" alt="" /></div>
+            <div class="card"><img src="public/asset/fs3.png" alt="" /></div>
+        </div>
+    </div>
+</section>
+
+
+  <section class="brief-history-section">
+    <div class="hero-left">
+        <p class="category">About us</p>
+        <h1>Brief history of our <br> Company</h1>
+        <p class="desc">
+            Lorem ipsum pov biongar telesk polyng. infrarad abplastisk intrad. <br>
+            Monovis ger. Makroren bent i plaska liksom egose. Lorem ipsum <br>
+            pov biongar telesk polyng. infrarad absplastisk intrad. Monovis ger. <br>
+            Makroren bent i plaska liskom egose.Lorem ipsum pov biongar <br>
+            telesk polyng. infrarad abplastisk intrad.
+        </p>
+    </div>
+    <div class="hero-right">
+        <div class="image-with-lines-container">
+            <img src="public/asset/1.png" alt="Orang di Bukit Saat Matahari Terbit" class="main-history-image" />
+            <img src="public/asset/l2.png" alt="Garis Dekoratif" class="single-decorative-lines" />
+        </div>
+    </div>
+</section>
+
+ <section class="owner-profile-section">
+    <div class="owner-image-container">
+        <img src="public/asset/2.png" alt="Office Interior" />
+    </div>
+    <div class="owner-text-container">
+        <p class="category">Owner</p>
+        <h1>Company owner <br> Motelkukusa </h1>
+        <p class="desc">
+            Lorem ipsum pov biongar telesk polyng. infrarad abplastisk intrad.
+            Monovis ger. Makroren bent i plaska liskom egose.
+        </p>
+        <div class="reviewer-info-small">
+            <img src="public/asset/purwa.png" alt="Purwa Adi Wicaksana" class="reviewer-photo-small" />
+            <div>
+                <p class="reviewer-name-small">Purwa Adi Wicaksana</p>
+                <p class="reviewer-title-small">Managing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section class="booking-section">
+    <div class="booking-left-content"> <p class="category">Booking</p>
+        <h1>Order Now by Clicking <br> the button below</h1>
+        <p class="desc">
+            Lorem ipsum pov biongar telesk polyng. infrarad abplastisk intrad.
+            Monovis ger. Makroren bent i plaska liskom egose.
+        </p>
+        <a href="#" class="secondary-btn">Booking hotel</a> </div>
+    <div class="booking-right-calendars"> <div class="calendar-wrapper">
+            <div class="calendar-card main-calendar">
+                <div class="calendar-header">
+                    <span class="arrow">&lt;</span>
+                    <span class="month-year">December 2022 <span class="dropdown-icon">🔽</span></span>
+                    <span class="arrow">&gt;</span>
+                </div>
+                <div class="calendar-weekdays">
+                    <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="calendar-dates">
+                    <span class="inactive">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span class="highlight-circle">5</span><span class="highlight-circle">6</span>
+                    <span class="highlight-range-start">7</span><span class="highlight-range">8</span><span class="highlight-range">9</span><span class="highlight-range">10</span><span class="highlight-range">11</span><span>12</span><span>13</span>
+                    <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                    <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                    <span class="inactive">28</span><span class="inactive">29</span><span class="inactive">30</span><span class="inactive">31</span><span class="inactive">1</span><span class="inactive">2</span><span class="inactive">3</span>
+                </div>
+                <div class="calendar-legend">
+                    <div class="legend-item"><span class="legend-dot purple"></span> Stay overnight</div>
+                    <div class="legend-item"><span class="legend-dot blue"></span> Booking</div>
+                </div>
+            </div>
+            <div class="calendar-card secondary-calendar">
+                <div class="calendar-header">
+                    <span class="arrow">&lt;</span>
+                    <span class="month-year">December 2022</span>
+                    <span class="arrow">&gt;</span>
+                </div>
+                <div class="calendar-weekdays">
+                    <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="calendar-dates">
+                    <span class="inactive">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span class="highlight-circle">5</span><span class="highlight-circle">6</span>
+                    <span class="highlight-range-start">7</span><span class="highlight-range">8</span><span class="highlight-range">9</span><span class="highlight-range">10</span><span class="highlight-range">11</span><span>12</span><span>13</span>
+                    <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+                    <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+                    <span class="inactive">28</span><span class="inactive">29</span><span class="inactive">30</span><span class="inactive">31</span><span class="inactive">1</span><span class="inactive">2</span><span class="inactive">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="publish-section">
+    <div class="publish-text-container">
+        <p class="section-subtitle">Publish</p>
+        <h1>Register now so you can choose <br> The Right House for your Family</h1>
+        <p class="desc">
+            Lorem ipsum pov biongar telesk polyng. infrarad abplastisk intrad. <br>
+            Monovis ger. Makroren bent i plaska liskom egose.</p>
+        <a href="#" class="registernow-btn green-outline-btn">Register Now</a>
+    </div>
+    <div class="publish-image-container">
+        <img src="public/asset/4.png" alt="Bangunan Modern" /> 
+        </div>
+</section>
+
+<section class="testimonials-section">
+    <div class="testimonials-text-container">
+        <p class="section-subtitle">Testimonila</p> <h1>Here are some testimonials from <br> our customers</h1>
+        <p class="desc">
+            we will keep you subscribed to us, with the service we provide to clients, we <br>
+            will make them satisfied with the performance of our team</p>
+    </div>
+    <div class="testimonial-card-container">
+        <div class="testimonial-card">
+            <div class="card-header">
+                <img src="public/asset/mic.png" alt="Michael derospred" class="reviewer-photo" /> <div class="reviewer-info">
+                    <p class="reviewer-name">Michael derospred</p>
+                    <p class="reviewer-title">Architect</p>
+                </div>
+                <img src="public/asset/tanda.png" alt="Quote icon" class="quote-icon" /> </div>
+            <p class="review-text">
+                They provide very good service in my opinion, from good <br>
+                communication, to easy payment, I will book hotel again if traveling out of town on this site</p>
+            <div class="star-rating">
+                <span class="star">&#9733;</span> <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span>
+                <span class="star">&#9733;</span> </div>
+        </div>
+        <div class="slider-nav">
+            <button class="slider-arrow right-arrow">&gt;</button> 
+        </div>
+    </div>
+</section>
+
+ <footer>
+    <div class="footer-cols">
+        <div class="footer-col about-company">
+            <h4 class="logo">M<span>otelkusuka</span></h4>
+            <p>Lorem ipsum od offer dfog. Bel trabel, samulgt, ohöbbel utom diska. Jnesade bel när feras retorade i belogi. KÄR paratygi i invåning, och peaseck vyfast. Viktiga podiobrade hai ur un-måd och linde.</p>
+            <div class="social-icons">
+                <a href="#"><img src="public/asset/fb.png" alt="Facebook" /></a> <a href="#"><img src="public/asset/tw.png" alt="Twitter" /></a>   <a href="#"><img src="public/asset/in.png" alt="LinkedIn" /></a>   <a href="#"><img src="public/asset/ig.png" alt="Instagram" /></a> </div>
+        </div>
+        
+        <div class="footer-col">
+            <h4>Home</h4>
+            <ul>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Price</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Comunity</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">History</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact-info">
+            <h4>Contact</h4>
+            <ul>
+                <li><img src="public/asset/tl.png" alt="telepon" /> (404) 555-0120</li> <li><img src="public/asset/em.png" alt="Email" /> motelkusuka@gmail.com</li> <li><img src="public/asset/lok.png" alt="Location" /> 2972 Westheimer Rd. Santa Ana, <br> Illinois 85486</li> </ul>
+        </div>
+    </div>
+</footer>
+
+  <script src="src/main.js"></script>
+</body>
 </html>
