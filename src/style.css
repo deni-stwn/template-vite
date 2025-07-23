@@ -2,41 +2,59 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", sans-serif; 
+    font-family: 'Poppins'; 
 }
 
-body {
+body { 
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; 
-    background-color: #f0fff0;
+    font-family: 'Poppins'; 
+    background-color: white;
     color: #333;
     box-sizing: border-box; 
 }
 
 header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    position:fixed;
+    align-items: content;
     padding: 20px 100px; 
-    background: #f0fff0;
+    background: transparent;
+    z-index: 1000;
 }
 
+.container {
+ max-width: 1440px;
+ margin: 0 auto;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 120px; 
+}
 .logo {
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 900;
-    color: #5ea06c; 
+    color: #42A66A; 
 }
 
 .logo span {
     color: #000000; 
+    font-size: 20px;
     font-weight: 400;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 24px;
+    gap: 65px;
     margin-left: auto; 
 }
 
@@ -56,10 +74,10 @@ nav a.active {
 }
 
 .auth-buttons {
-    position: static; 
-    display: flex;
-    gap: 15px;
-    margin-left: 40px; 
+    position: fixed; 
+    right: 100px;
+    top: 20px;
+    z-index: 1000;
 }
 
 .auth-buttons a {
@@ -96,7 +114,7 @@ nav a.active {
 .hero {
     display: flex;
     align-items: center;
-    padding: 50px 100px; 
+    padding: 0px 200px; 
     background-color: #f0fff0;
     gap: 80px; 
     flex-wrap: wrap; 
@@ -104,27 +122,17 @@ nav a.active {
 
 .hero-left {
     flex: 1;
-    min-width: 200px; 
-    max-width: 70%; 
-}
-
-.hero-right {
-    flex: 1.2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start; 
-    position: relative;
-    height: 100%;
-    max-height: 700px;
-    overflow: hidden;
+    min-width: 250px; 
+    max-width: 500px;
 }
 
 .hero-right img { 
-    width: 80%;
+    width: 85%;
     height: auto;
+    display: block;
+    left: 270px;
+    position: relative;
     object-fit: cover;
-    border-radius: 0px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     max-height: 700px; 
 }
 
@@ -135,7 +143,7 @@ nav a.active {
 }
 
 .hero h1 {
-    font-size: 3.5rem; 
+    font-size: 3.1rem; 
     line-height: 1.0;
     margin-bottom: 15px;
     color: #333;
@@ -143,13 +151,19 @@ nav a.active {
 
 .green { 
     color: #5ea06c;
-    font-weight: 900;
+    font-weight: 685px;
+    font-family: poppins;
+}
+
+.black{ 
+    color: #000000;
+    font-weight: 400;
 }
 
 .desc {
     margin-bottom: 25px;
     color: #666;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     line-height: 1.4;
 }
 
@@ -171,86 +185,109 @@ nav a.active {
 
 .brief-history-section {
     display: flex;
-    align-items: center;
-    padding: 80px 100px;
-    background-color: #fff;
-    gap: 60px;
+    align-items: content;
+    padding: 80px 110px;
+    background-color: white;
     flex-wrap: wrap;
 }
 
-.brief-history-section .hero-left { 
-    flex: 1;
-    min-width: 300px;
-    max-width: 50%; 
+.brief-history-section .container {
+  display: flex;
+  gap: 110px;
+  align-items: content;
+  flex-wrap: wrap;
 }
 
-.brief-history-section .hero-left .category {
+.brief-history-section .about-left { 
+    flex: 1;
+    min-width: 300px;
+    max-width: 90%; 
+}
+
+.brief-history-section .about-left .category {
     font-size: 1rem;
-    color: #4CAF50;
+    color: #42A66A;
     margin-bottom: 10px;
 }
 
-.brief-history-section .hero-left h1 {
+.brief-history-section .about-left h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #080E15;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.brief-history-section .hero-left .desc {
+.brief-history-section .about-left .desc {
     font-size: 1rem;
     color: #666;
     line-height: 1.6;
 }
 
-.brief-history-section .hero-right { 
+.brief-history-section .about-right { 
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative; 
-    min-width: 400px; 
+    min-width: 500px; 
 }
 
+.about-right {
+    flex: 1.2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; 
+    position: relative;
+    height: 100%;
+    max-height: 750px;
+
+}
 .image-with-lines-container {
     position: relative;
     width: 100%; 
     padding-bottom: 66.66%; 
-    max-width: 550px; 
-    overflow: visible; 
+    max-width: 600px; 
     margin: 0;
 }
 
-.image-with-lines-container .main-history-image {
+.image-with-lines-container 
+.main-history-image {
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
     width: 100%;
     height: auto;
-    object-fit: cover;
-    z-index: 3;
-    border-radius: 0px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    z-index: 2; 
+    pointer-events: none;
+    transform: translate(2px, -4px); 
+    display: block;
 }
 
-.single-decorative-lines { 
-    position: absolute;
-    z-index: 1;
-    width: 100%; 
-    height: 100%;
-    top: -4%;
-    left: -70%;
-    opacity: 0.7;
-    pointer-events: none;
+.image-with-lines-container 
+.vektor-image {
+  position: absolute;
+  top: -90px;
+  left: -100px;
+  width: 706.5px;
+  height: 439.5px;
+  opacity: 1;
+  z-index: 1;
 }
+
 
 .owner-profile-section {
     display: flex;
     align-items: center;
-    padding: 80px 100px; 
     background-color: white;
-    gap: 60px;
+    gap: 130px;
     flex-wrap: wrap;
+}
+
+.owner-profile-section .container {
+  display: flex;
+  gap: 110px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .owner-profile-section .owner-image-container { 
@@ -267,8 +304,6 @@ nav a.active {
     height: auto;
     max-width: 550px;
     object-fit: cover;
-    border-radius: 0px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .owner-profile-section .owner-text-container {
@@ -279,6 +314,7 @@ nav a.active {
 
 .owner-profile-section .owner-text-container .category {
     margin-bottom: 15px;
+    color: #42A66A;
 }
 
 .owner-profile-section .owner-text-container h1 {
@@ -320,17 +356,22 @@ nav a.active {
 }
 
 
+
 .partners {
-    padding: 50px 100px; 
+    padding: 80px 100px; 
     text-align: center;
     background-color: white;
+    line-height: 2.0;
+    
 }
 
 .partners h3 {
-    margin-bottom: 30px;
-    color: #000000;
-    font-size: 2rem; 
-    font-weight: 600;
+   font-family: Poppins;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 1.0;
+    letter-spacing: 0%;
 }
 
 .logos {
@@ -367,7 +408,7 @@ nav a.active {
 
 .popular h2 {
     font-size: 2.5rem; 
-    color: #333;
+    color: #080E15;
     margin-bottom: 10px;
 }
 
@@ -436,192 +477,48 @@ nav a.active {
     color: #5ea06c; 
 }
 
+
 .booking-section {
-    display: flex;
-    align-items: center;
-    padding: 80px 100px;
-    background-color: white;
-    gap: 80px;
-    flex-wrap: wrap;
-    overflow: hidden;
+    display: flex; 
+    align-items: center; 
+    padding: 80px 90px; 
+    gap: 110px; 
+    flex-wrap: wrap; 
+    background-color: #ffffff;
 }
 
-.booking-section .booking-left-content {
-    flex: 1;
-    min-width: 300px;
-    max-width: 50%;
+.booking-section .container {
+  display: flex;
+  gap: 220px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.booking-section .booking-left-content .category {
-    margin-bottom: 15px;
+
+.booking-right img {
+  max-width: 100%;
+  height: auto;
 }
 
-.booking-section .booking-left-content h1 {
-    font-size: 2.5rem;
-    color: #333;
-    line-height: 1.2;
+.booking-left-content h1 {
+    font-size: 2.5em; 
+    color: #080E15; 
     margin-bottom: 20px;
 }
 
-.booking-section .booking-left-content .desc {
-    margin-bottom: 30px;
+.booking-left-content .category {
+    font-size: 0.9em;
+    color: #42A66A;
+    margin-bottom: 5px;
 }
 
-.booking-section .booking-right-calendars {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-width: 400px;
-    height: 450px;
-}
-
-.booking-section .booking-right-calendars .calendar-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 450px;
-}
-
-.booking-section .booking-right-calendars .calendar-card {
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    padding: 25px;
-    position: absolute;
-    width: 90%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transform: translate(-50%, -50%); 
-}
-
-.booking-section .booking-right-calendars .main-calendar {
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-}
-
-.booking-section .booking-right-calendars .secondary-calendar {
-    z-index: 1;
-    opacity: 0.7;
-    top: 65%; 
-    left: 80%;
-}
-
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #333;
-    font-weight: 500;
-}
-.calendar-header .arrow {
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #888;
-}
-.calendar-header .month-year {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-.calendar-header .dropdown-icon {
-    font-size: 0.7rem;
-    color: #888;
-}
-
-.calendar-weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 10px;
-}
-.calendar-weekdays span {
-    padding: 5px 0;
-}
-
-.calendar-dates {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-size: 0.95rem;
-    color: #555;
-}
-.calendar-dates span {
-    padding: 10px 0;
-    cursor: pointer;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.calendar-dates .inactive {
-    color: #ccc;
-    cursor: default;
-}
-.calendar-dates .highlight-circle { 
-    background-color: #51dcff; 
-    color: white;
-    font-weight: bold;
-}
-.calendar-dates .highlight-range-start {
-    background-color: #9370db; 
-    color: white;
-    font-weight: bold;
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-top-right-radius: 0; 
-    border-bottom-right-radius: 0; 
-}
-.calendar-dates .highlight-range { 
-    background-color: #9370db;
-    color: white;
-    font-weight: bold;
-    border-radius: 0; 
-}
-.calendar-dates .highlight-range-end { 
-    background-color: #9370db;
-    color: white;
-    font-weight: bold;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.calendar-legend {
-    display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    margin-top: 15px;
-    font-size: 0.9rem;
+.booking-left-content .desc {
+    font-size: 1em;
+    line-height: 1.6;
     color: #666;
+    margin-bottom: 25px;
 }
-.calendar-legend .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.calendar-legend .legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
-.calendar-legend .legend-dot.purple {
-    background-color: #9370db;
-}
-.calendar-legend .legend-dot.blue {
-    background-color: #6495ed;
-}
-
-.secondary-btn { 
+.secondary-btn {
     display: inline-block;
     background-color: transparent;
     color: #097721;
@@ -638,47 +535,65 @@ nav a.active {
     color: white;
 }
 
+.booking-right {
+    flex: 1; 
+    min-width: 300px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.booking-right .image img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
 
 .publish-section {
     display: flex;
     align-items: center;
-    padding: 80px 0px 80px 100px; 
+    padding: 90px 0px 0px 150px; 
     background-image: linear-gradient(to right, #F4FFFC, #DEFFB4);
-    gap: 90px; 
-    flex-wrap: wrap;
-    overflow: hidden; 
+    gap: 80px; 
 }
 
+.publish-section .container {
+  display: flex;
+  gap: 200px;
+  align-items: content;
+  flex-wrap: wrap;
+}
 .publish-text-container {
     flex: 1;
-    min-width: 300px; 
-    padding-right: 40px;
+    min-width: 200px; 
+    padding-right:-10px;
 }
 
 .publish-image-container {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    min-width: 400px; 
-    overflow: hidden; 
+    align-items: content;
+    min-width: 200px; 
 }
 
 .publish-image-container img {
-    width: 100%;
-    height: auto;
+    width: 542;
+    height: 420;
+    opacity: 1;
+    top: 33px;
+    left: 898px;
     max-height: 400px;
     object-fit: cover;
     border-radius: 0; 
-    box-shadow: none; 
-    margin-right: -2px; 
 }
 
-.publish-text-container h1 {
-    font-size: 2.5rem; 
+.publish-text-container h2 {
+    font-size: 2.2rem; 
     line-height: 1.3;
     color: #333;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .registernow-btn { 
@@ -702,7 +617,7 @@ nav a.active {
 .testimonials-section {
     display: flex;
     align-items: center;
-    padding: 80px 100px; 
+    padding: 80px 120px; 
     background-color: white;
     gap: 70px; 
     flex-wrap: wrap;
@@ -714,11 +629,12 @@ nav a.active {
     min-width: 300px;
     padding-right: 20px;
     max-width: 50%; 
+    color: #42A66A;
 }
 
-.testimonials-text-container h1 {
+.testimonials-text-container h2 {
     font-size: 2rem;
-    line-height: 1;
+    line-height: 1.5;
     color: #333;
     margin-bottom: 15px;
 }
@@ -726,16 +642,7 @@ nav a.active {
 .testimonials-text-container .desc {
     font-size: 1rem;
     color: #666;
-    line-height: 1.2;
-}
-
-.testimonial-card-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-    min-width: 400px; 
+    line-height: 1.5;
 }
 
 .testimonial-card {
@@ -776,13 +683,13 @@ nav a.active {
 
 .testimonial-card .reviewer-title {
     font-size: 14px;
-    color: #888;
+    color: #969696;
 }
 
 .testimonial-card .quote-icon {
     position: absolute;
     top: -10px; 
-    right: -10px; 
+    right: 190px; 
     width: 60px; 
     height: auto;
     opacity: 0.2;
@@ -806,7 +713,7 @@ nav a.active {
 
 .slider-nav {
     position: absolute;
-    right: 55px; 
+    right: 160px; 
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -826,7 +733,6 @@ nav a.active {
     align-items: center;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
@@ -834,54 +740,85 @@ nav a.active {
     background-color: #4a8c57;
 }
 
+.testimonials-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.testimonials-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
 
 footer {
-    background: #0A2D20;
+    background: #0E2614;
     color: white;
-    padding: 90px 100px; 
+    padding: 60px 100px; 
+    gap: 10px;
+    width: 1140;
+    height: 258;
+     margin: 0 auto;
 }
 
 .footer-cols {
     display: flex;
-    gap: 60px; 
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    gap: 32px;               
+    flex-wrap: nowrap;        
+    align-items: flex-start;
 }
 
 .footer-col {
-    min-width: 150px;
-    margin-bottom: 20px;
+  min-width: 140px;         
+  line-height: 2;          
+  margin: 0;   
 }
 
 .footer-col.about-company {
-    flex: 1.5;
-    min-width: 250px;
-    max-width: 350px;
+    flex: 2 1 300px;          
+  max-width: 340px;
 }
 
-.footer-col h4 {
+.footer-col h3 {
     margin-bottom: 20px;
+    font: Roboto;
     font-size: 18px;
     color: white;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0 0 12px 0; 
 }
 
 .footer-col .logo { 
-    font-size: 24px;
-    font-weight: 900;
+    font: poppins;
+    font-size: 33.38px;
+    font-weight: 700;
     color: white; 
-    margin-bottom: 20px;
+    font-style: bold;
     display: inline-block;
 }
 
 .footer-col .logo span {
     color: white;
-    font-weight: 400;
+    font-weight: 500;
+    font:poppins;
+    font-style:medium;
+    font-size: 14px;
 }
 
 .footer-col p {
+    font:roboto;
+    font-style: Regular;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 1.6;
-    color: #CCCCCC;
+    line-height: 24px;
+    color: #DDDDDD;
     margin-bottom: 20px;
 }
 
@@ -891,9 +828,10 @@ footer {
 }
 
 .footer-cols li {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #CCCCCC;
     font-size: 14px;
+    
 }
 
 .footer-cols li a {
@@ -931,383 +869,8 @@ footer {
     width: 18px;
     height: 18px;
     margin-right: 10px;
-    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(108%) contrast(105%);
 }
 
-
-@media (max-width: 992px) {
-    header {
-        padding: 20px 40px;
-    }
-    nav ul {
-        gap: 15px;
-    }
-    .auth-buttons {
-        margin-left: 20px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 60px 40px;
-        gap: 40px;
-    }
-    .hero-left, .hero-right {
-        max-width: 100%;
-        min-width: unset;
-    }
-    .hero h1 {
-        font-size: 2.8rem;
-    }
-    .hero-right img {
-        max-height: 400px;
-    }
-
-    .brief-history-section {
-        flex-direction: column;
-        padding: 60px 40px;
-        gap: 40px;
-    }
-    .brief-history-section .hero-left,
-    .brief-history-section .hero-right {
-        max-width: 100%;
-        min-width: unset;
-        text-align: center;
-    }
-    .brief-history-section .hero-left h1 {
-        font-size: 2rem;
-    }
-    .image-with-lines-container {
-        width: 80%;
-        max-width: 450px;
-        padding-bottom: 75%;
-    }
-    .single-decorative-lines {
-        width: 130%;
-        top: -8%;
-        left: -8%;
-    }
-
-    .owner-profile-section {
-        flex-direction: column;
-        padding: 60px 40px;
-        gap: 40px;
-        text-align: center;
-    }
-    .owner-profile-section .owner-image-container,
-    .owner-profile-section .owner-text-container {
-        max-width: 100%;
-        min-width: unset;
-    }
-    .owner-profile-section .owner-text-container h1 {
-        font-size: 2rem;
-    }
-    .owner-profile-section .reviewer-info-small {
-        justify-content: center;
-    }
-
-    .partners {
-        padding: 40px 40px;
-    }
-    .logos {
-        gap: 30px;
-    }
-    .logos img {
-        height: 60px;
-    }
-
-    .popular {
-        padding: 60px 40px;
-    }
-    .popular h2 {
-        font-size: 2rem;
-    }
-    .popular-header-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-    .cards {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
-
-    .booking-section {
-        flex-direction: column;
-        padding: 60px 40px;
-        gap: 50px;
-    }
-    .booking-section .booking-left-content {
-        max-width: 100%;
-        min-width: unset;
-        text-align: center;
-    }
-    .booking-section .booking-left-content h1 {
-        font-size: 2rem;
-    }
-    .booking-section .booking-right-calendars {
-        min-width: unset;
-        height: 400px;
-        width: 100%;
-    }
-    .booking-section .booking-right-calendars .calendar-wrapper {
-        max-width: 350px;
-    }
-    .booking-section .booking-right-calendars .main-calendar {
-        transform: translate(-50%, -50%);
-    }
-    .booking-section .booking-right-calendars .secondary-calendar {
-        top: 65%;
-        left: 65%;
-        transform: translate(-50%, -50%);
-    }
-
-    .publish-section {
-        flex-direction: column;
-        padding: 60px 40px; 
-        gap: 40px;
-    }
-    .publish-text-container {
-        padding-right: 0;
-        text-align: center;
-        max-width: 100%;
-        min-width: unset;
-    }
-    .publish-image-container {
-        min-width: unset;
-        justify-content: center; 
-    }
-    .publish-image-container img {
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-        margin-right: 0;
-    }
-    .publish-text-container h1 {
-        font-size: 2rem;
-    }
-
-    .testimonials-section {
-        flex-direction: column;
-        padding: 60px 40px;
-        gap: 40px;
-        text-align: center;
-    }
-    .testimonials-text-container {
-        padding-right: 0;
-        max-width: 100%;
-        min-width: unset;
-    }
-    .testimonial-card-container {
-        min-width: unset;
-        width: 100%;
-    }
-    .slider-nav { 
-        position: static; 
-        transform: none;
-        flex-direction: row; 
-        justify-content: center;
-        margin-top: 30px;
-        width: 100%;
-    }
-    .slider-arrow.right-arrow {
-        margin-left: 15px; 
-    }
-
-    footer {
-        padding: 60px 40px;
-    }
-    .footer-cols {
-        gap: 30px;
-        justify-content: space-around;
-    }
-    .footer-col {
-        min-width: 150px;
-    }
-    .footer-col.about-company {
-        flex-basis: 100%;
-        max-width: unset;
-        text-align: center;
-    }
-    .social-icons {
-        justify-content: center;
-    }
-    .footer-cols ul,
-    .footer-col.contact-info {
-        text-align: center;
-        align-items: center;
-    }
-    .footer-col.contact-info li {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        padding: 15px 20px;
-        flex-wrap: wrap; 
-        justify-content: center; 
-        gap: 20px;
-    }
-    nav {
-        order: 2; 
-        width: 100%;
-        justify-content: center;
-    }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-left: 0;
-        gap: 10px;
-    }
-    .auth-buttons {
-        order: 1; 
-        width: 100%;
-        justify-content: center;
-        margin-left: 0;
-    }
-    .logo {
-        order: 0; 
-    }
-
-    .hero {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .brief-history-section {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    .brief-history-section .hero-left h1 {
-        font-size: 1.8rem;
-    }
-    .image-with-lines-container {
-        width: 95%;
-        padding-bottom: 70%;
-    }
-    .single-decorative-lines {
-        width: 150%;
-        top: -10%;
-        left: -10%;
-    }
-
-    .owner-profile-section {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    .owner-profile-section .owner-text-container h1 {
-        font-size: 1.8rem;
-    }
-    .owner-profile-section .owner-image-container img {
-        width: 100%;
-    }
-
-    .partners {
-        padding: 30px 20px;
-    }
-    .partners h3 {
-        font-size: 1.8rem;
-    }
-    .logos {
-        gap: 20px;
-    }
-    .logos img {
-        height: 50px;
-    }
-
-    .popular {
-        padding: 40px 20px;
-    }
-    .popular h2 {
-        font-size: 1.8rem;
-    }
-    .popular p {
-        font-size: 0.9rem;
-    }
-    .cards {
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-    .card-content {
-        padding: 15px;
-    }
-
-    .booking-section {
-        padding: 40px 20px;
-        gap: 40px;
-    }
-    .booking-section .booking-left-content h1 {
-        font-size: 1.8rem;
-    }
-    .booking-section .booking-right-calendars {
-        height: 350px;
-    }
-    .booking-section .booking-right-calendars .calendar-wrapper {
-        max-width: 90%;
-    }
-    .booking-section .booking-right-calendars .secondary-calendar {
-        top: 70%;
-        left: 70%;
-        width: 80%;
-    }
-
-    .publish-section {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    .publish-text-container h1 {
-        font-size: 1.8rem;
-    }
-
-    .testimonials-section {
-        padding: 40px 20px;
-        gap: 30px;
-    }
-    .testimonials-text-container h1 {
-        font-size: 1.8rem;
-    }
-    .testimonial-card {
-        padding: 20px;
-        width: 95%;
-    }
-    .testimonial-card .reviewer-photo {
-        width: 50px;
-        height: 50px;
-    }
-    .testimonial-card .quote-icon {
-        width: 50px;
-    }
-
-    footer {
-        padding: 40px 20px;
-    }
-    .footer-cols {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-    }
-    .footer-col {
-        min-width: 80%;
-        max-width: 350px;
-        text-align: center;
-    }
-    .footer-col h4,
-    .footer-col p,
-    .footer-cols ul {
-        text-align: center;
-    }
-    .footer-cols li,
-    .footer-col.contact-info li,
-    .social-icons {
-        justify-content: center;
-    }
-    .footer-social-icons img {
-        width: 20px;
-        height: 20px;
-        color: white;
-    }
+.footer-col.about-company + .footer-col {
+  margin-left: auto;          
 }
