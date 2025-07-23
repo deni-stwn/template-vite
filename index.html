@@ -7,29 +7,33 @@
   <title>Course.yuk</title>
   <link rel="stylesheet" href="src/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-container">
-      <div class="logo">
-        <span class="logo-orange">C</span>ourses.yuk
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#category">Category</a></li>
-        <li><a href="#mentor">Top Mentor</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-
-      </ul>
-      <div class="auth-buttons">
-        <button id="loginBtn">Log in</button>
-        <button id="registerBtn">Registration</button>
-      </div>
-    </div>
-  </nav>
+   <header>
+    <nav class="navbar">
+       <div class="navbar-container">
+         <div class="logo">
+           <span class="logo-orange">C</span>ourses.yuk
+         </div>
+         <ul class="nav-links">
+           <li><a href="#">Home</a></li>
+           <li><a href="#category">Category</a></li>
+           <li><a href="#mentor">Top Mentor</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#contact">Contact</a></li>
+   
+         </ul>
+         <div class="auth-buttons">
+           <button id="loginBtn">Log in</button>
+           <button id="registerBtn">Registration</button>
+         </div>
+       </div>
+     </nav>
+   </header>
 
   <section class="hero">
     <div class="container hero-content">
@@ -40,8 +44,12 @@
         <p>Lorem ipsum dolor sit amet siti zahra tunnisa,<br> consectetur adipiscing elit.</p>
         <button class="register-now">Register Now</button>
       </div>
-      <div class="hero-image">
-        <img src="/public/assets/cewe.png" alt="Mentor Image" />
+      <div class="hero-image" style="position: relative;">
+        <img src="/assets/vektor (2).png" 
+        style="position:absolute; width: 219.5px; top: 30px; right: -25px; z-index: -1;" />
+        <img src="/assets/vektor (2).png" 
+        style="position:absolute; width: 219.5px; z-index: -1; top: 400px; left: -95px; transform: rotate(180deg);" />
+        <img src="/assets/cewe.png" alt="Mentor Image" />
       </div>
     </div>
   </section>
@@ -105,24 +113,8 @@
   <section id="mentor" class="mentor-highlight">
     <div class="mentor-container">
       <div class="mentor-image">
-        <img src="public/assets/4.png" alt="Mentor Professional" />
-
-        <!-- Bubble 1 -->
-        <div class="chat-bubble chat-1">
-          <div class="dot dot-green"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
-        </div>
-
-        <!-- Bubble 2 -->
-        <div class="chat-bubble chat-2">
-          <div class="dot dot-yellow"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
-        </div>
+        <img src="/assets/group1.png" alt="Mentor Professional" />
       </div>
-
-
       <div class="mentor-text">
         <h2>Mentors who are <br> <span>professional in</span> <br> their fields</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum massa sit amet porta efficitur.</p>
@@ -206,11 +198,15 @@
         <div class="box-decor small-strip"></div>
         <div class="box-text">
           <h2>Develop Your Quality</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum massa sit amet porta efficitur.
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec <br>fermentum massa sit amet porta efficitur.
           </p>
           <button class="btn-orange">Get Started</button>
         </div>
         <div class="image-person">
+          <img src="/assets/vektor (2).png" 
+        style="position:absolute; width: 128px; height:128px; top: 30px; right: -25px; z-index: -1;" />
+        <img src="/assets/vektor (2).png" 
+        style=" width: 128px; height:128px; z-index: -1;  transform: rotate(180deg);" />
           <img src="public/assets/wanita.png" alt="Person">
         </div>
       </div>

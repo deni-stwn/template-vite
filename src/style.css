@@ -1,3 +1,6 @@
+
+/*         RESET DASAR         */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,44 +9,49 @@ body {
   color: #333;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/*         NAVIGATION BAR      */
+
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
+  height: 80px;
   z-index: 1000;
   background-color: #fffaf3;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 25px 50px; 
+  font-family: 'Poppins', sans-serif
 }
 
 .navbar-container {
-  max-width: 1200px;
-  padding: 20px 80px;
+  max-width: 1440px;
+  height: 100%;
+  padding: 30px 80px;
   margin: 0 auto;
+  padding: 0 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  box-sizing: border-box
 }
 
-
 .logo {
-  font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: #333;
 }
 
-
 .logo-orange {
   color: #ff7a00;
 }
 
-/* Menu link */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 40px; /* lebih longgar */
+  gap: 40px;
 }
 
 .nav-links a {
@@ -52,19 +60,15 @@ body {
   font-weight: 500;
   font-size: 17px;
   letter-spacing: 0.3px;
-  font-family: 'Poppins', sans-serif;
 }
 
-
-/* Tombol Login dan Register */
 .auth-buttons button {
-  font-family: 'Poppins', sans-serif;
   margin-left: 14px;
   padding: 10px 24px;
   border: none;
   cursor: pointer;
   border-radius: 25px;
-  font-size: 16px; /* diperbesar */
+  font-size: 16px;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -84,17 +88,19 @@ body {
   background-color: #ff9500;
 }
 
+/*         HERO SECTION        */
 
-/* Hero Section */
 .hero {
-  display: flex;
+  position: relative;
   justify-content: space-between;
-  align-items: stretch;
-  gap: 50px;
-  height: auto;
-  padding: 0; /* hilangkan padding */
+  align-items: center;
+  gap: 60px;
+  min-height: 730px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 80px;
+  box-sizing: border-box;
 }
-
 
 .hero-content {
   display: flex;
@@ -102,22 +108,24 @@ body {
   align-items: center;
   gap: 60px;
 }
+
 .hero-text {
   max-width: 550px;
 }
 
 .hero-text h1 {
-  position: center;
-  font-size: 50px;
+  width: 558px;
+  height: 270px;
+  top: 190;
+  font-size: 64px;
   font-weight: 700;
   line-height: 1.6;
   margin-bottom: 30px;
+  font-family: 'Inter', sans-serif;
 }
 
-
-
 .hero-text p {
-  font-size: 20px;
+  font-size: 16px;
   color: #666;
   margin-bottom: 30px;
 }
@@ -138,23 +146,20 @@ body {
   background-color: #ff9500;
 }
 
-/* Gambar Hero */
-.hero-image img {
-  width: 500px;
-  height: 150%;
-  object-fit: contain;
-  border-radius: 12px;
+.hero-image {
+  width: 517px;
+  height: 777px;
+  margin-top: 80px;
+  margin-left: auto;
 }
 
-.garis-dekoratif {
-  position: absolute;
-  z-index: 1;
-  top: 20px;        /* atur sesuai kebutuhan */
-  left: -40px;      /* atur posisi ke kiri */
-  width: 150px;     /* ukuran garis */
-  opacity: 0.6;     /* agar tidak terlalu mencolok */
-  pointer-events: none; /* supaya tidak ganggu klik */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  margin-top: 125px;
+  margin-left: auto;
 }
+ 
 
 .orange {
   color: #ff7a00;
@@ -164,10 +169,21 @@ body {
   color: #1f1f1f;
 }
 
+.garis-dekoratif {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: -40px;
+  width: 150px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/*       FIND COURSE SECTION   */
 
 .find-course {
   background-color: white;
-  padding: 80px 40px;
+  padding: 0 80px;
   display: flex;
   justify-content: center;
 }
@@ -180,12 +196,179 @@ body {
   align-items: center;
 }
 
+.courses-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.course-card {
+  width: 360px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-info {
+  padding: 20px;
+}
+
+.course-info .price {
+  font-size: 14px;
+  background-color: #fff3e0;
+  color: #ff7a00;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+}
+
+
+
+
+.course-info .meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+.course-info h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.course-info p {
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+}
+
+.see-course-wrapper {
+  margin-top: 10px;
+}
+
+.see-course-btn {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.25);
+}
+
+.see-course-btn:hover {
+  background-color: #ff9500;
+  transform: translateY(-2px);
+}
+
+.find-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.find-title {
+  font-size: 40px;
+  font-weight: 700;
+  flex: 1;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 10px;
+}
+
+.find-desc {
+  font-size: 16px;
+  color: #666;
+  flex: 1;
+  text-align: right;
+}
+
+/*     MENTOR HIGHLIGHT SECTION  */
+
 .mentor-highlight {
   background-color: white;
   padding: 100px 40px;
   display: flex;
   justify-content: center;
 }
+
+.mentor-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.mentor-image {
+  height: 424px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mentor-image img {
+  height: 424px;
+  object-fit: cover;
+}
+
+.mentor-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 12px;
+}
+
+.mentor-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin-bottom: 0;
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+}
+
+.mentor-text h2 span {
+  color: #1f1f1f;
+}
+
+.mentor-text p {
+  color: #1f1f1f !important;
+  font-size: 16px;
+}
+
+/*        GROWTH SECTION        */
 
 .growth-section {
   background-color: white;
@@ -196,7 +379,8 @@ body {
 
 .growth-container {
   max-width: 1200px;
-  width: 100%;
+  width: 1140px;
+  height: 399;
   display: flex;
   align-items: center;
   gap: 60px;
@@ -205,19 +389,19 @@ body {
 
 .growth-text {
   flex: 1;
-  min-width: 280px;
+  width: 501px;
+  height: 399;
 }
 
 .growth-text h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   color: #1f1f1f;
-  margin-bottom: 20px;
-  line-height: 1.4;
+  font-family: 'Inter', sans-serif;;
 }
 
 .growth-text p {
-  font-size: 18px;
+  font-size: 16px;
   color: #666;
   margin-bottom: 30px;
 }
@@ -265,10 +449,7 @@ body {
   background-color: #ff9500;
 }
 
-.growth-graph img {
-  width: 500px;
-  height: auto;
-}
+/*      GROWTH GRAPH IMAGE     */
 
 .growth-graph {
   position: relative;
@@ -276,11 +457,15 @@ body {
   width: 100%;
 }
 
+.growth-graph img {
+  width: 500px;
+  height: auto;
+}
+
 .chart-base,
 .chart-curve {
   width: 100%;
   height: auto;
-  display: block;
 }
 
 .chart-curve {
@@ -291,12 +476,11 @@ body {
 
 .data-point-peak {
   position: absolute;
-  left: 99.5%;   /* Geser lebih ke kanan, mendekati ujung */
-  top: 19%;      /* Atur lebih presisi vertikal ke puncak kurva */
+  left: 99.5%;       /* mendekati ujung kanan */
+  top: 20%;          /* sesuaikan titik puncak */
   transform: translate(-100%, -100%);
   text-align: center;
 }
-
 
 .data-point-peak .dot {
   width: 10px;
@@ -315,10 +499,7 @@ body {
   display: inline-block;
 }
 
-
-
-
-/* Label Tahun Menyatu */
+/* Label tahun di bawah grafik */
 .year-labels {
   display: flex;
   justify-content: space-between;
@@ -331,248 +512,22 @@ body {
   top: 0;
 }
 
-
-
-.mentor-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.mentor-image img {
-  width: 360px;
-  height: auto;
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.mentor-image {
-  position: relative;
-  width: fit-content;
-}
-
-.chat-bubble {
-  position: absolute;
-  width: 120px;
-  height: 80px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Posisi bubble */
-.chat-1 {
-  top: 20px;
-  left: -70px;
-}
-
-.chat-2 {
-  bottom: 20px;
-  right: -70px;
-}
-
-/* Dot status */
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-bottom: 5px;
-}
-
-.dot-green {
-  background-color: #00c04b;
-}
-
-.dot-yellow {
-  background-color: #f4c200;
-}
-
-/* Garis isi bubble */
-.line {
-  height: 6px;
-  background-color: #ccc;
-  border-radius: 3px;
-  width: 100%;
-}
-
-.line.short {
-  width: 60%;
-}
-
-.mentor-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;   /* teks tetap rata kiri */
-  text-align: left;          /* isi teks juga rata kiri */
-  max-width: 600px;          /* lebar kotak dibatasi */
-  margin: 0 auto;            /* ini bikin kotaknya ada di tengah halaman */
-  gap: 12px;
-}
-
-.mentor-text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #1f1f1f;
-  margin-bottom: 0;
-  line-height: 1.4;
-}
-
-.mentor-text h2 span {
-  color: #1f1f1f ;
-}
-
-
-.mentor-text p {
-  color: #1f1f1f !important;
-}
-
-
-.courses-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.course-card {
-  width: 360px; /* Ukuran diperbesar */
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
-.course-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.course-info {
-  padding: 20px;
-}
-
-.course-info h3 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.course-info p {
-  font-size: 14px;
-  color: #666;
-}
-
-.course-info .price {
-  font-size: 14px;
-  background-color: #fafafa;
-  color: #ff7a00;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-weight: 600;
-}
-
-.course-info .meta {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  font-size: 13px;
-  color: #999;
-}
-
-.see-course-wrapper {
-  margin-top: 10px;
-}
-
-.see-course-btn {
-  background-color: #ff7a00;
-  color: white;
-  border: none;
-  padding: 16px 48px; /* Diperbesar */
-  border-radius: 30px;
-  font-size: 18px;     /* Font lebih besar */
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.25); /* Tambah bayangan */
-}
-
-.see-course-btn:hover {
-  background-color: #ff9500;
-  transform: translateY(-2px);
-}
-
-
-.see-course-btn:hover {
-  background-color: #ff9500;
-}
-
-
-.find-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-}
-
-.find-title {
-  font-size: 40px;
-  font-weight: 700;
-  flex: 1;
-}
-
-.find-desc {
-  font-size: 20px;
-  color: #666;
-  flex: 1;
-  text-align: right;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    padding: 60px 20px;
-    text-align: center;
-  }
-
-  .hero-image img {
-    width: 80%;
-  }
-
-  .navbar {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-}
-
+/* ---------------------------- */
+/*      TESTIMONIAL SECTION    */
+/* ---------------------------- */
 .testimonial-section {
   background-color: #fff8f2;
-  padding: 100px 0;
+  max-width: 1200px;
+  padding: 80px 20px;
+  position: relative;
+  margin: auto;
+  width: 1440px;
+  height: 380px;
 }
 
 .testimonial-section .container {
   display: flex;
+  position: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 50px;
@@ -581,58 +536,32 @@ body {
   padding: 0 20px;
 }
 
-.text-left {
-  flex: 1 1 40%;
-}
-
-.text-left h2 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #1d1d1d;
-}
-
-.text-left p {
-  margin-top: 10px;
-  color: #555;
-}
-
-.testimonial-section {
-  background-color: #fff8f2;
-  padding: 100px 0;
-  position: relative;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
-
 .testimonial-text {
   flex: 1;
   max-width: 450px;
+  position: center;
 }
 
 .testimonial-text h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
   color: #1d1d1d;
+  font-family: 'Inter', sans-serif;
 }
 
 .testimonial-text p {
   margin-top: 16px;
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
+/*        TESTIMONIAL CARDS    */
+
 .testimonial-cards {
   position: relative;
-  width: 500px;
-  height: 320px; /* pastikan tinggi cukup menampung keduanya */
+  width: 400px;
+  height: 350px; /* cukup untuk 2 card tumpuk */
 }
 
 .testimonial-card {
@@ -646,18 +575,19 @@ body {
 }
 
 .card-top {
+  position: absolute;
   top: 0;
   left: 100px;
   z-index: 2;
 }
 
 .card-bottom {
+  position: absolute;
   top: 180px;
   left: 0;
-  z-index: 1; /* lebih rendah */
+  z-index: 1;
   opacity: 0.9;
 }
-
 
 .user-info {
   display: flex;
@@ -688,6 +618,9 @@ body {
   color: gold;
 }
 
+
+/*        CARD ANIMATION       */
+
 .card {
   opacity: 0;
   transform: translateY(30px);
@@ -709,21 +642,27 @@ body {
   }
 }
 
+
+/*        DEVELOP SECTION      */
+
 .develop-section {
   background-color: #ffffff;
   padding: 100px 0;
+  align-items: center;
 }
 
 .develop-section .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 100%px; /* tetap gunakan batas wajar */
-  margin: 0 auto;
-  padding: 0 80px; /* padding wajar */
+  justify-content: center;
+  max-width: 100%; /* perbaikan: sebelumnya ada kesalahan `100%px` */
+  margin: 20px 80px;
+  padding: 0 80px;
   gap: 40px;
 }
 
+
+/*         CONTENT BOX         */
 
 .content-box {
   position: relative;
@@ -732,15 +671,16 @@ body {
   padding: 60px 40px;
   border-radius: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  max-width: none;          /* hilangkan pembatas lebar */
-  width: 100%;              /* penuh */
-  display: flex;            /* agar teks dan gambar sejajar */
-  align-items: center;
+  width: 1140px;
+  height: 300px;
+  display: flex;
+  align-items:center;
   justify-content: space-between;
   gap: 40px;
 }
 
 
+/*       BOX DECORATION        */
 
 .box-decor {
   position: absolute;
@@ -751,17 +691,9 @@ body {
   background: url('/assets/rectangle.png') no-repeat center center;
   background-size: cover;
   z-index: 0;
-}
-
-.box-decor {
-  position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 0;
   opacity: 1;
 }
 
-/* Strip besar */
 .big-strip {
   top: 0;
   left: 0;
@@ -770,7 +702,6 @@ body {
   background-image: url('/assets/kecil.png');
 }
 
-/* Strip kecil */
 .small-strip {
   top: 30px;
   left: 30px;
@@ -780,6 +711,8 @@ body {
 }
 
 
+/*         BOX TEXT            */
+
 .box-text h2 {
   position: relative;
   z-index: 2;
@@ -788,6 +721,7 @@ body {
   color: #1d1d1d;
   margin-bottom: 20px;
   line-height: 1.4;
+  font-family: 'Inter', sans-serif;
 }
 
 .box-text p {
@@ -796,6 +730,9 @@ body {
   margin-bottom: 30px;
   line-height: 1.6;
 }
+
+
+/*         BUTTON ORANGE       */
 
 .btn-orange {
   background-color: #ff7a00;
@@ -813,15 +750,26 @@ body {
   background-color: #e26700;
 }
 
+
+/*         IMAGE PERSON        */
+
 .image-person img {
-  height: 400px;
-  width: auto;
+  height: 473px;
+  width: 277px;
+  margin-left: -20px;
+
+  
 }
 
 .image-person {
+  height: 473px;
+  width: 277px;
   flex: 1;
   text-align: right;
 }
+
+
+/*         FOOTER SECTION      */
 
 .footer {
   background-color: #3c240c;
@@ -837,13 +785,17 @@ body {
   flex-wrap: wrap;
 }
 
+
+/*         BRAND INFO          */
+
 .footer-brand {
   flex: 1 1 300px;
 }
 
 .footer-brand h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 25px;
+  margin-bottom: 35px;
+  margin-top: 10px;
 }
 
 .footer-brand p {
@@ -852,11 +804,16 @@ body {
   margin-bottom: 20px;
 }
 
+
+/*        SOCIAL ICONS         */
+
 .social-icons img {
-  width: 24px;
   margin-right: 10px;
   cursor: pointer;
 }
+
+
+/*         FOOTER LINKS        */
 
 .footer-links {
   display: flex;
@@ -883,11 +840,17 @@ body {
   margin-bottom: 8px;
 }
 
+
+/*       FOOTER CONTACT        */
+
 .footer-contact p {
   font-size: 14px;
   color: #ccc;
   margin-bottom: 10px;
 }
+
+
+/*       EMAIL SUBSCRIBE       */
 
 .email-form {
   display: flex;
@@ -896,7 +859,6 @@ body {
   border-radius: 30px;
   overflow: hidden;
   width: 100%;
-  max-width: 240px;
 }
 
 .email-form input {
@@ -916,6 +878,93 @@ body {
   cursor: pointer;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ---------------------------- */
+/*       RESPONSIVE STYLES     */
+/* ---------------------------- */
+@media (max-width: 768px) {
+  /* HERO SECTION RESPONSIVE */
+  .hero {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 80%;
+  }
+
+  /* NAVBAR RESPONSIVE */
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* FIND COURSE SECTION */
+  .find-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .find-desc {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  /* MENTOR SECTION */
+  .mentor-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mentor-text {
+    text-align: center;
+    align-items: center;
+  }
+
+  /* DEVELOP SECTION */
+  .develop-section .container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .image-person {
+    text-align: center;
+  }
+
+  /* TESTIMONIAL SECTION */
+  .testimonial-section .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial-text {
+    max-width: 100%;
+  }
+
+  .testimonial-cards {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .testimonial-card {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .card-top,
+  .card-bottom {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: auto;
+  }
 }
