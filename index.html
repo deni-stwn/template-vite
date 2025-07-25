@@ -5,31 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hotel Booking</title>
   <link rel="stylesheet" href="src/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
    <header> 
     <div class="container">
       <div class="logo-container">
-      <div class="logo">M<span>otelkusuka</span></div>
+      <img src="Group 1.svg" alt="Logo" class="logo" />
       <nav>
         <ul>
           <li><a href="#" class="active">Home</a></li>
-          <li><span href="#">Booking</span></li>
-          <li><span href="#">Facilities</span></li>
-          <li><span href="#">About us</span></li>
-          <li><span href="#">Contact</span></li>
+          <li><a href="#" class="teks">Booking</a></li>
+          <li><a href="#" class="teks">Facilities</a></li>
+          <li><a href="#" class="teks">About us</a></li>
+          <li><a href="#" class="teks">Contact</a></li>
         </ul>
         </nav>
      
       <div class="auth-buttons">
         <a href="#" class="login">Log in</a>
         <a href="#" class="register">Register</a>
-    </div>  
- </div>
-    </header>
+     </div>  
+    </div>
+</header>
     
     <main class="hero">
-         <div class="container">
+         <div class="hero-container">
       <div class="hero-left">
         <p class="category">Mountains | Plans | Beaches</p>
         <h1>
@@ -63,7 +69,7 @@
 
 
  <section class="popular">
-     <div class="container">
+     <div class="popular-container">
         <div class="popular-header-row">
             <div>
                 <h2>Most Popular</h2>
@@ -84,7 +90,7 @@
 
 
   <section class="brief-history-section">
-     <div class="container">
+     <div class="about-container">
     <div class="about-left">
         <p class="category">About us</p>
         <h1>Brief history of our <br> Company</h1>
@@ -106,17 +112,17 @@
 </section>
 
  <section class="owner-profile-section">
-    <div class="container">
+    <div class="owner-container">
     <div class="owner-image-container">
-        
         <img src="/asset/2.png" alt="Office Interior" />
+        <img src="/asset/latar.png" alt="Garis2" class="vektor-image2"/>
     </div>
     <div class="owner-text-container">
         <p class="category">Owner</p>
-        <h1>Company owner <br> Motelkusuka </h1>
+        <h2>Company owner <br> Motelkusuka </h2>
         <p class="desc">
-            Lorem ipsum pov biongar telesk polyng. infrarad abplastisk intrad. <br>
-            Monovis ger. Makroren bent i plaska liskom egose.
+            “ Lörem ipsum pov biongar telesk polyng. Infrarad abplastisk intrad. <br>
+            Monovis ger. Makroren bent i plaska liksom egose”.
         </p>
         <div class="reviewer-info-small">
             <img src="/asset/purwa.png" alt="Purwa Adi Wicaksana" class="reviewer-photo-small" />
@@ -130,7 +136,7 @@
 </section>
 
  <section class="booking-section">
-    <div class="container">
+    <div class="booking-container">
     <div class="booking-left-content"> 
         <p class="category">Booking</p>
         <h1>Order Now by Clicking <br> the button below</h1>
@@ -164,7 +170,7 @@
 </section>
 
 <section class="testimonials-section">
-    <div class="container">
+    <div class="testimonial-container">
     <div class="testimonials-text-container">
         <p class="section-subtitle">Testimonila</p>
         <h2>Here are some testimonials from <br> our customers</h2>
@@ -197,11 +203,13 @@
 </section>
 
  <footer>
-    <div class="container">
+    <div class="footer-container">
     <div class="footer-cols">
         <div class="footer-col about-company">
-            <h4 class="logo">M<span>otelkusuka</span></h4>
-            <p>Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio har un mad och inde. </p>
+            <img src="svg2.svg" alt="footer logo" class="footer-logo" />
+            <p>Lörem ipsum od ohet dilogi. Bell trabel, samuligt, ohöbel utom diska. Jinesade bel när
+                feras redorade i belogi. FAR paratyp i muvåning, och pesask vyfisat. Viktiga poddradio
+                 har un mad och inde.  </p>
             <div class="social-icons">
                 <a href="#"><img src="/asset/fb.png" alt="Facebook" /></a> 
                 <a href="#"><img src="/asset/tw.png" alt="Twitter" /></a>  
@@ -233,8 +241,7 @@
             <ul>
                 <li><img src="/asset/tl.png" alt="telepon" /> (404) 555-0120</li> 
                 <li><img src="/asset/em.png" alt="Email" /> motelkusuka@gmail.com</li> 
-                <li><img src="/asset/lok.png" alt="Location" /> 2972 Westheimer Rd. Santa Ana, <br> 
-                    Illinois 85486</li> 
+                <li><img src="/asset/lok.png" alt="Location" />2972 Westheimer Rd. Santa Ana,<br> Illinois 85486 </li> 
             </ul>
         </div> 
     </div>
