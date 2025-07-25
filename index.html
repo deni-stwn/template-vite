@@ -17,13 +17,13 @@
     <nav class="navbar">
        <div class="navbar-container">
          <div class="logo">
-           <span class="logo-orange">C</span>ourses.yuk
+           <img src="/assets/Group 35.svg" alt="Logo Image">
          </div>
          <ul class="nav-links">
            <li><a href="#">Home</a></li>
-           <li><a href="#category">Category</a></li>
-           <li><a href="#mentor">Top Mentor</a></li>
-           <li><a href="#about">About</a></li>
+           <li><a href="#category">Course</a></li>
+           <li><a href="#mentor">Mentor</a></li>
+           <li><a href="#about">About Us</a></li>
            <li><a href="#contact">Contact</a></li>
    
          </ul>
@@ -56,7 +56,7 @@
 
   </section>
 
-  <!-- Second Section -->
+ <!-- Second Section -->
   <section id="category" class="find-course">
     <div class="find-container">
       <h2 class="find-title">Find The Course<br> You Want</h2>
@@ -66,50 +66,82 @@
 
   <section class="course-list">
     <div class="courses-container">
-      <div class="course-card">
-        <img src="public/assets/1.png" alt="HTML CSS" />
-        <div class="course-info">
-          <span class="price">$25/Course</span>
-          <h3>Basic programming (HTML, CSS)</h3>
-          <p>Raphael • Teacher</p>
-          <div class="meta">
-            <span>⭐ 2.1k</span>
-            <span>20 Video</span>
-          </div>
-        </div>
+        <div class="course-card">
+      <div class="image-wrapper">
+        <img src="/assets/1.png" alt="HTML CSS" />
+        <span class="price">$25/Course</span>
       </div>
 
-      <div class="course-card">
-        <img src="public/assets/2.png" alt="HTML CSS" />
-        <div class="course-info">
-          <span class="price">$25/Course</span>
-          <h3>Basic programming (HTML, CSS)</h3>
-          <p>Microna • Teacher</p>
-          <div class="meta">
-            <span>⭐ 3.5k</span>
-            <span>20 Video</span>
+      <div class="course-info">
+        <h3>Basic programming (HTML, CSS)</h3>
+
+        <div class="teacher-info">
+          <img src="/assets/raphael.png" alt="Raphael" class="profile-photo" />
+          <div class="teacher-details">
+            <p class="name">Raphael</p>
+            <p class="role">Teacher</p>
           </div>
         </div>
-      </div>
 
-      <div class="course-card">
-        <img src="public/assets/3.png" alt="Photography" />
-        <div class="course-info">
-          <span class="price">$25/Course</span>
-          <h3>Photography</h3>
-          <p>Davidun • Teacher</p>
-          <div class="meta">
-            <span>⭐ 4k</span>
-            <span>20 Video</span>
-          </div>
+        <div class="meta">
+          <span>⭐ 2.1k</span>
+          <span>20 Video</span>
         </div>
       </div>
     </div>
-    <div class="see-course-wrapper">
-      <button class="see-course-btn">See course</button>
+     
+    <!--card 2-->
+    <div class="course-card">
+      <div class="image-wrapper">
+        <img src="/assets/2.png" alt="HTML CSS" />
+        <span class="price">$25/Course</span>
+      </div>
+
+      <div class="course-info">
+        <h3>Basic programming (HTML, CSS)</h3>
+
+        <div class="teacher-info">
+          <img src="/assets/microna.png" alt="  Microna" class="profile-photo" />
+          <div class="teacher-details">
+            <p class="name">Microna</p>
+            <p class="role">Teacher</p>
+          </div>
+        </div>
+
+        <div class="meta">
+          <span>⭐ 2.1k</span>
+          <span>20 Video</span>
+        </div>
+      </div>
+    </div>
+
+     <!--card 3-->
+    <div class="course-card">
+      <div class="image-wrapper">
+        <img src="/assets/3.png" alt="HTML CSS" />
+        <span class="price">$25/Course</span>
+      </div>
+
+      <div class="course-info">
+        <h3>Basic programming (HTML, CSS)</h3>
+
+        <div class="teacher-info">
+          <img src="/assets/dun.png" alt="Davidun" class="profile-photo" />
+          <div class="teacher-details">
+            <p class="name">Davidun</p>
+            <p class="role">Teacher</p>
+          </div>
+        </div>
+
+        <div class="meta">
+          <span>⭐ 2.1k</span>
+          <span>20 Video</span>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
-
+  
   <section id="mentor" class="mentor-highlight">
     <div class="mentor-container">
       <div class="mentor-image">
@@ -130,16 +162,16 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum massa sit amet porta efficitur.</p>
 
         <ul class="benefits-list">
-          <li><span class="dot green"></span> World-class</li>
-          <li><span class="dot green"></span> Affordable</li>
-          <li><span class="dot green"></span> Flexible</li>
-          <li><span class="dot green"></span> Job-relevant</li>
+          <li><img src="/assets/16.png">World-class</li>
+          <li><img src="/assets/16.png">Flexible</li>
+          <li><img src="/assets/16.png">Affordable</li>
+          <li><img src="/assets/16.png">Job-relevant</li>
         </ul>
         <button class="register-growth">Register Now</button>
       </div>
       <div class="growth-graph">
-        <img src="public/assets/6.png" class="chart-base" />
-        <img src="public/assets/vektor.png" class="chart-curve" />
+        <img src="/assets/6.png" class="chart-base" />
+        <img src="/assets/vektor.png" class="chart-curve" />
 
         <!-- Puncak 2025 -->
         <div class="data-point-peak">
@@ -162,32 +194,16 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum massa sit amet porta efficitur.</p>
       </div>
 
-      <div class="testimonial-cards">
-        <!-- Card 1 -->
-        <div class="testimonial-card card-top">
-          <div class="user-info">
-            <img src="public/assets/foto 2.png" alt="ahkesini">
-            <div>
-              <strong>ahkesini</strong><br><span>UI Designer</span>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card card-bottom">
-          <div class="user-info">
-            <img src="public/assets/foto 1.png" alt="ahkama">
-            <div>
-              <strong>ahkama</strong><br><span>Product Manager</span>
-            </div>
-          </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
-        </div>
+      <div class="testimonial wrapper">
+      <div class="chat-popup">
+          <img src="/assets/Frame 11.png" alt="chat popup" class="popup-image">
       </div>
-    </div>
+      <div class="chat-2">
+        <img src="/assets/Group 1992(1).png" alt="chat popup" class="popup-image">
+      </div>
+      </div>
+
+
   </section>
 
   <section id="about" class="develop-section">
@@ -207,7 +223,7 @@
         style="position:absolute; width: 128px; height:128px; top: 30px; right: -25px; z-index: -1;" />
         <img src="/assets/vektor (2).png" 
         style=" width: 128px; height:128px; z-index: -1;  transform: rotate(180deg);" />
-          <img src="public/assets/wanita.png" alt="Person">
+          <img src="/assets/wanita.png" alt="Person">
         </div>
       </div>
     </div>
@@ -216,13 +232,13 @@
   <footer id="contact" class="footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <h2><span class="logo-orange">C</span>oursess.yuk</h2>
+        <img src="/public/assets/Group 36.svg" alt="Logo Image">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum massa sit amet porta efficitur.</p>
         <div class="social-icons">
-          <img src="public/assets/facebook.png" alt="Facebook" />
-          <img src="public/assets/twitter.png" alt="Twitter" />
-          <img src="public/assets/instagram.png" alt="Instagram" />
-          <img src="public/assets/linkind.png" alt="LinkedIn" />
+          <img src="/assets/facebook.png" alt="Facebook" />
+          <img src="/assets/twitter.png" alt="Twitter" />
+          <img src="/assets/linkind.png" alt="LinkedIn" />
+          <img src="/assets/instagram.png" alt="Instagram" />
         </div>
       </div>
 
@@ -263,8 +279,7 @@
           <h4>About us</h4>
           <p>You can contact us to send email to us</p>
           <div class="email-form">
-            <input type="email" placeholder="Your email" />
-            <button>➔</button>
+            <img src="/assets/Frame 31.png" alt="Email Image">
           </div>
         </div>
       </div>
