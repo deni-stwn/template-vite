@@ -141,7 +141,6 @@ html {
   }
 }
 
-
 /*         HERO SECTION        */
 
 .hero {
@@ -336,114 +335,215 @@ html {
   padding-top: 80px;
 }
 
-.course-list {
-  background-color: #ffffff;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cards-display-wrapper {
+    background-color: white;
+    width: 100%;
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
-.courses-container {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1140px;
-  margin: 0 auto;
+.course-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; 
 }
 
 .course-card {
-  background-color: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-  width: 360px;
-  position: relative;
+    position: relative; 
+    background-color: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 8px 20px var(--card-shadow); 
+    overflow: hidden; 
+    width: 364px;  
+    height: 219px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
 }
 
 .course-card:hover {
-  transform: translateY(-5px);
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); 
 }
 
-.image-wrapper img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+
+.card-bg-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 1; 
 }
 
-.course-info {
-  padding: 20px;
+
+.course-price-overlay {
+   position: absolute; 
+    z-index: 10; 
+    color: #ff9500; 
+    padding: 6px 12px; 
+    border-radius: 6px; 
+    font-weight: 600;
+    font-size: 0.85em;
+    font-family: 'Inter', sans-serif; 
+    border-radius: 15px;
+}
+.course-rating-overlay {
+    position: absolute; 
+    z-index: 10; 
+    color: rgb(255, 255, 255); 
+    padding: 6px 12px; 
+    border-radius: 6px; 
+    font-weight: 600;
+    font-size: 0.85em;
+    font-family: 'Inter', sans-serif; 
+    border-radius: 15px;
 }
 
-.course-info h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #222;
+.course-price-overlay {
+    top: 15px;
+    left: 15px;
+    background-color: white;
 }
 
-.price {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background-color: #fff3e0;
-  color: #ff7a00;
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
+.course-rating-overlay {
+    top: 15px;
+    right: 15px;
+    background-color: rgba(54, 54, 54, 0.55); 
+    display: flex; 
+    align-items: center; 
+    gap: 4px; 
 }
 
-/* Informasi guru */
+
+.card-content-overlay {
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px; 
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%);
+    color: #fff; 
+    z-index: 5; 
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-title {
+    font-size: 1.1em; 
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 10px; 
+    line-height: 1.3;
+    color: #fff; 
+    font-family: 'Poppins', sans-serif; 
+}
+.course-meta {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-top: 0; 
+    border-top: none; 
+    padding-bottom: 0; 
+}
+
 .teacher-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 
-.profile-photo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+.teacher-profile-pic {
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 1.5px solid rgba(255, 255, 255, 0.5); 
+}
+.teacher-name {
+    font-size: 0.9em; 
+    font-weight: 600;
+    color: #fff; 
 }
 
-.teacher-details .name {
-  font-weight: bold;
-  margin: 0;
+.course-lessons {
+    font-size: 0.9em; 
+    font-weight: 500;
+    color: #fff; 
 }
 
-.teacher-details .role {
-  font-size: 14px;
-  color: #777;
-  margin: 0;
+@media (max-width: 992px) {
+    .course-card {
+        width: 320px; 
+        height: calc(320px * (219 / 364));
+    }
 }
 
+
+@media (max-width: 768px) {
+    .cards-display-wrapper {
+        padding: 15px; 
+    }
+    .course-cards-container {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+    .course-card {
+        width: 90%; 
+        max-width: 380px; 
+        height: calc(90vw * (219 / 364));
+       
+    }
+    .card-title {
+        font-size: 1.2em; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .course-card {
+        width: 100%; 
+        max-width: 350px; 
+        height: calc(100vw * (219 / 364)); 
+    }
+    .card-content-overlay {
+        padding: 15px 15px; 
+    }
+    .card-title {
+        font-size: 1.1em;
+    }
+}
 /* Tombol See Course */
-.see-course-wrapper {
-  margin-top: 10px;
+.button-wrapper {
+  background-color: white;
+  text-align: center;
 }
 
-.see-course-btn {
-  background-color: #ff7a00;
-  color: white;
-  border: none;
-  padding: 16px 48px;
+.btn {
+  display: inline-block; 
+  padding: 12px 30px;
   border-radius: 30px;
-  font-size: 14px;
+  text-decoration: none;
+  font-size: 16px;
   font-weight: 600;
+  transition: background-color 0.3s ease;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(255, 122, 0, 0.25);
+  border: none;
 }
 
-.see-course-btn:hover {
-  background-color: #ff9500;
-  transform: translateY(-2px);
+.btn-primary {
+  background-color: #ff7a00;
+  color: white; 
 }
 
+.btn-primary:hover {
+  background-color: #e66c00;
+}
 /* Header section judul + deskripsi */
 .find-container {
   max-width: 1140px;
