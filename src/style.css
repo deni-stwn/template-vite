@@ -225,7 +225,7 @@ nav a.active {
     margin: 0 auto;
     padding: 80px 0;
     background-color: white;
-  gap: 200px;
+    gap: 200px;
     max-width: 1140px;
 }
 
@@ -234,7 +234,7 @@ nav a.active {
     margin: 0 auto;
     align-items: content;
     display: flex;
-    gap: 110px;
+    gap: 200px;
     flex-wrap: wrap;
 }   
 
@@ -249,6 +249,7 @@ nav a.active {
     flex: 1;
     min-width: 300px;
     max-width: 700px; 
+
 }
 
 .brief-history-section .about-left .category {
@@ -261,11 +262,11 @@ nav a.active {
     font-size: 2.5rem;
     color: #080E15;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .brief-history-section .about-left .desc {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
     line-height: 1.2;
 }
@@ -280,13 +281,13 @@ nav a.active {
 }
 
 .about-right {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start; 
     position: relative;
     height: 100%;
-    max-height: 700px;
+    max-height: 100%;
 
 }
 .image-with-lines-container {
