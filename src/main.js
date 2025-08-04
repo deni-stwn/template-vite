@@ -10,4 +10,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: document.querySelector(".popular").offsetTop, behavior: "smooth" });
   });
 });
- 

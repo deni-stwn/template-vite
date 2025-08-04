@@ -83,14 +83,20 @@ nav a {
     line-height: 100%;
     transition: color 0.3s ease; 
 }
+
 nav a.teks {
     color: #646464;
     text-decoration: none;
 
 }
 nav a.active {
+    text-decoration: none;
+       color: #5ea06c;
+}
+nav a:hover {
     color: #5ea06c;
     text-decoration: none;
+
 }
 
 .auth-buttons {
@@ -225,7 +231,7 @@ nav a.active {
     margin: 0 auto;
     padding: 80px 0;
     background-color: white;
-    gap: 200px;
+     gap: 200px;
     max-width: 1140px;
 }
 
@@ -234,7 +240,7 @@ nav a.active {
     margin: 0 auto;
     align-items: content;
     display: flex;
-    gap: 200px;
+    gap: 110px;
     flex-wrap: wrap;
 }   
 
@@ -262,11 +268,11 @@ nav a.active {
     font-size: 2.5rem;
     color: #080E15;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .brief-history-section .about-left .desc {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #666;
     line-height: 1.2;
 }
