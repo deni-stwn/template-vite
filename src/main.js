@@ -10,3 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.scrollTo({ top: document.querySelector(".popular").offsetTop, behavior: "smooth" });
   });
 });
+ const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+  const auth = document.querySelector('.auth-buttons');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    auth.classList.toggle('active');
+  });
